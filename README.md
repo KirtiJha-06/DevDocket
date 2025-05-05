@@ -1,70 +1,225 @@
-# Getting Started with Create React App
+# 🚀 DevDocket – Developer Productivity Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DevDocket is an all-in-one productivity dashboard tailored for developers. It features a **coding tracker**, **micro-journal**, **bug vault**, **Pomodoro-style break timer**, and **tech stack planner** — all built using modern frontend tools like React, MUI, and Framer Motion.
 
-## Available Scripts
+🌐 [Live Demo](https://dev-docket-seven.vercel.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🧭 Modular Developer Dashboard
+A toolkit built for devs, by devs. Switch between a coding tracker, journal, bug vault, break timer, and stack planner — all from a single layout. It’s like Notion and Trello had a baby (and made it dark mode by default).
 
-### `npm test`
+💾 Persistent Local Storage
+No backend? No problem. Your tasks, logs, and journal entries live safely in your browser thanks to localStorage. Close the tab — we’ve still got your back.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🌙 MUI Theming with Dark Mode
+Toggle between light and dark like a UI wizard. Built with MUI’s theming system and a sprinkle of custom palette magic for that sleek, branded feel.
 
-### `npm run build`
+🎞 Framer Motion Animations
+Pages don’t just load — they glide in. Buttons bounce. Progress rings animate. The whole thing feels buttery smooth, thanks to Framer Motion.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔔 Snackbars for Feedback
+Click, save, done. Subtle, non-blocking snackbars let users know what’s happening — without being annoying about it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📱 Fully Responsive Layout
+Desktop, tablet, mobile — DevDocket adapts like a pro. Built with MUI’s Grid system and breakpoints so it looks clean no matter the screen size.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⌨️ Accessible by Design
+Keyboard-navigable components and semantic structure make DevDocket usable for everyone. Because good UX includes every user.
 
-### `npm run eject`
+🧠 Tech Stack That Means Business
+React, MUI (Material-UI), React Router, Framer Motion, localStorage. No fluff — just battle-tested frontend tools used the right way.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
+🧩 UI Components Overview (For README.md)
+Each tool in DevDocket is a standalone module within a unified dashboard. Here’s how each one works and what makes it useful:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📝 Micro-Journal
+“Your personal dev diary — reflect, plan, and log.”
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Purpose:
+Capture your thoughts, ideas, or daily logs in a minimal note-taking interface.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+UI Elements:
 
-## Learn More
+Input for title and journal text
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Save button
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+List of previous entries displayed in scrollable cards or list
 
-### Code Splitting
+Delete/edit options (if enabled)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+How it works:
+Entries are stored in the browser using localStorage and displayed on reload. The UI is clean and responsive with MUI Cards.
 
-### Analyzing the Bundle Size
+👨‍💻 Coding Tracker
+“Keep a log of your grind — track what you’ve coded, when, and for how long.”
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Purpose:
+A lightweight tracker for your daily coding tasks and sessions.
 
-### Making a Progressive Web App
+UI Elements:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Task name input
 
-### Advanced Configuration
+Time spent input
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Language/technology field (optional)
 
-### Deployment
+Submit button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Session history rendered in a card list or table
 
-### `npm run build` fails to minify
+How it works:
+New entries are saved to localStorage. Past logs are shown below the input area using MUI components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🐞 Bug Vault
+“Squashed a bug? Log it before it bites back.”
+
+Purpose:
+A personal issue tracker for recording bugs and their fixes.
+
+UI Elements:
+
+Bug title and description
+
+Optional “fix” or notes field
+
+Add/Edit/Delete functionality
+
+Entries shown in collapsible cards or list
+
+How it works:
+Bugs are stored in localStorage and rendered dynamically. Designed for fast entry and retrieval with minimal overhead.
+
+🧠 Tech Stack Planner
+“Plan your next big project’s stack — without sticky notes.”
+
+Purpose:
+Visually map out tech stacks for future or current projects.
+
+UI Elements:
+
+Input for tool name, type (e.g. frontend, backend), and notes
+
+Grouped tech cards displayed by category
+
+Edit/delete buttons for each item
+
+How it works:
+Each stack entry is stored locally and grouped dynamically in the UI. Uses MUI Cards or Chips for tech tiles.
+
+⏲️ Break Buddy (Pomodoro Timer)
+“Work hard, rest smart — 25 minutes on, 5 minutes off.”
+
+Purpose:
+A minimal Pomodoro-style timer to help with productivity and breaks.
+
+UI Elements:
+
+Countdown timer display
+
+Start, Pause, Reset buttons
+
+Circular progress ring
+
+Optional end-session alert/snackbar
+
+How it works:
+Timer is controlled via React hooks (setInterval) and animated with Framer Motion. Works fully client-side.
+
+🎛️ Dashboard Layout
+“Your control center — sleek, dark, and responsive.”
+
+Purpose:
+Unified layout for easy access to all modules.
+
+UI Elements:
+
+Sidebar navigation (MUI Drawer)
+
+Top AppBar with dark mode toggle
+
+Responsive Grid layout
+
+How it works:
+React Router handles routing. MUI Drawer adapts to screen size. Dark mode preference is stored and reloaded automatically.
+
+🎨 Theme & Experience
+“Beautiful, accessible, and smooth.”
+
+Built with MUI theming (custom color palette, dark/light toggle)
+
+Framer Motion animations for smooth transitions and interactions
+
+Fully responsive via MUI Grid
+
+Keyboard-accessible components and clear visual hierarchy
+
+
+## 🛠️ Tech Stack
+
+| Category             | Tech                                                   |
+|----------------------|--------------------------------------------------------|
+| Frontend Framework   | React, React Router                                    |
+| UI Library           | Material-UI (MUI)                                      |
+| Animations           | Framer Motion                                          |
+| Styling & Theming    | MUI theming, custom palette, responsive drawer         |
+| State & Persistence  | React hooks, `localStorage`                            |
+| UX & Accessibility   | Keyboard navigation, snackbars, animations             |
+| Deployment           | Vercel                                                 |
+| Version Control      | Git & GitHub                                           |
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** and **npm** installed.
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/devdocket.git
+cd devdocket
+npm install
+
+#Run Locally
+npm start
+The app will run in development mode on http://localhost:3000.
+📁 Folder Structure
+
+devdocket/
+├── public/
+├── src/
+│   ├── components/        
+│   ├── pages/            
+│   ├── styles/            
+│   ├── utils/             
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
+
+🚀 Deployment
+This project is deployed on Vercel:
+🔗 https://dev-docket-seven.vercel.app/
+
+To deploy your own version:
+
+Push your project to a GitHub repo
+
+Connect the repo to Vercel (or Netlify)
+
+Done — automatic deployments on every push!
+
+🙋 Author
+Your Name
+🔗 https://github.com/KirtiJha-06
+
+
